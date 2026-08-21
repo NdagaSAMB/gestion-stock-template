@@ -19,10 +19,10 @@ if (session_status() === PHP_SESSION_NONE) {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <meta name="description" content="POS - Bootstrap Admin Template" />
+    <meta name="description" content="POS - Modèle d'administration Bootstrap" />
     <meta name="keywords"
-      content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects" />
-    <meta name="author" content="Dreamguys - Bootstrap Admin Template" />
+      content="admin, estimations, bootstrap, business, corporate, creative, facture, html5, responsive, Projets" />
+    <meta name="author" content="Dreamguys - Modèle d'administration Bootstrap" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Liste des Catégories</title>
 
@@ -54,12 +54,12 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="content">
           <div class="page-header">
             <div class="page-title">
-              <h4>List Categories produits</h4>
-              <h6>View/Search Product Categories</h6>
+              <h4>Liste des Catégories de produits</h4>
+              <h6>Voir / Rechercher les catégories de produits</h6>
             </div>
             <div class="page-btn">
               <a href="addcategory.php" class="btn btn-added">
-                <img src="assets/img/icons/plus.svg" class="me-1" alt="img" />Add Category
+                <img src="assets/img/icons/plus.svg" class="me-1" alt="img" />Ajouter une catégorie
               </a>
             </div>
           </div>
@@ -79,10 +79,10 @@ if (session_status() === PHP_SESSION_NONE) {
                 <table class="table datanew">
                   <thead>
                     <tr>
-                      <th>Category Image</th>
-                      <th>Category Name</th>
+                      <th>Image de la catégorie</th>
+                      <th>Nom de la catégorie</th>
                       <th>Description</th>
-                      <th>Created By</th>
+                      <th>Créé par</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -91,7 +91,7 @@ if (session_status() === PHP_SESSION_NONE) {
                       <tr>
                         <td>
                           <a class="product-img">
-                            <img src="<?= $cats[$i]['cat_image'] ?>" alt="product" />
+                            <img src="<?= $cats[$i]['cat_image'] ?>" alt="produit" />
                           </a>
                         </td>
                         <td>
