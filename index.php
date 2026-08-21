@@ -38,7 +38,6 @@ foreach ($all_sales as $item) {
 
 $total_all_pur = 0;
 foreach ($all_purchases as $value) {
-    // Remplacez 'total' par le nom exact de la colonne montant dans vos achats (ex: 'montant', 'total_achat')
     $total_all_pur += $value['total'] ?? $value['montant'] ?? 0;
 }
 
@@ -52,12 +51,12 @@ $top_sales = array_slice($all_sales, 0, 4);
 $recent_products = array_slice(array_reverse($products), 0, 4);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta name="description" content="POS - Bootstrap Admin Template">
+    <meta name="description" content="POS - Modèle d'administration Bootstrap">
     <meta name="robots" content="noindex, nofollow">
     <title>AMITAM Store</title>
 
@@ -86,44 +85,44 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="dash-widget">
                             <div class="dash-widgetimg">
-                                <span><img src="assets/img/icons/dash1.svg" alt="img"></span>
+                                <span><img src="assets/img/icons/dash1.svg" alt="image"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5><span class="counters" data-count="<?= $total_all_pur ?>"><?= number_format($total_all_pur, 2, '.', ' ') ?> DH</span></h5>
-                                <h6>Total Purchases (DH)</h6>
+                                <h5><span class="counters" data-count="<?= $total_all_pur ?>"><?= number_format($total_all_pur, 2, ',', ' ') ?> DH</span></h5>
+                                <h6>Total Achats (DH)</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="dash-widget dash1">
                             <div class="dash-widgetimg">
-                                <span><img src="assets/img/icons/dash2.svg" alt="img"></span>
+                                <span><img src="assets/img/icons/dash2.svg" alt="image"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5><span class="counters" data-count="<?= $total_all_sales ?>"><?= number_format($total_all_sales, 2, '.', ' ') ?> DH</span></h5>
-                                <h6>Total Sales (DH)</h6>
+                                <h5><span class="counters" data-count="<?= $total_all_sales ?>"><?= number_format($total_all_sales, 2, ',', ' ') ?> DH</span></h5>
+                                <h6>Total Ventes (DH)</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="dash-widget dash2">
                             <div class="dash-widgetimg">
-                                <span><img src="assets/img/icons/dash3.svg" alt="img"></span>
+                                <span><img src="assets/img/icons/dash3.svg" alt="image"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5><span class="counters" data-count="<?= $total_all_sales - $total_all_pur ?>"><?= number_format($total_all_sales - $total_all_pur, 2, '.', ' ') ?> DH</span></h5>
-                                <h6>Total Profit (DH)</h6>
+                                <h5><span class="counters" data-count="<?= $total_all_sales - $total_all_pur ?>"><?= number_format($total_all_sales - $total_all_pur, 2, ',', ' ') ?> DH</span></h5>
+                                <h6>Bénéfice Total (DH)</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="dash-widget dash3">
                             <div class="dash-widgetimg">
-                                <span><img src="assets/img/icons/dash4.svg" alt="img"></span>
+                                <span><img src="assets/img/icons/dash4.svg" alt="image"></span>
                             </div>
                             <div class="dash-widgetcontent">
                                 <h5><span class="counters" data-count="<?= $total_all_pr ?>"><?= $total_all_pr ?></span></h5>
-                                <h6>Total Products (Units)</h6>
+                                <h6>Total Produits (Unités)</h6>
                             </div>
                         </div>
                     </div>
@@ -166,7 +165,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                         <div class="dash-count">
                             <div class="dash-counts">
                                 <h4><?= $clients ?></h4>
-                                <h5>Customers</h5>
+                                <h5>Clients</h5>
                             </div>
                             <div class="dash-imgs">
                                 <i data-feather="user"></i>
@@ -177,7 +176,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                         <div class="dash-count das1">
                             <div class="dash-counts">
                                 <h4><?= $suppliers ?></h4>
-                                <h5>Suppliers</h5>
+                                <h5>Fournisseurs</h5>
                             </div>
                             <div class="dash-imgs">
                                 <i data-feather="user-check"></i>
@@ -188,7 +187,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                         <div class="dash-count das2">
                             <div class="dash-counts">
                                 <h4><?= $purchases ?></h4>
-                                <h5>Purchase Invoice</h5>
+                                <h5>Factures d'achat</h5>
                             </div>
                             <div class="dash-imgs">
                                 <i data-feather="file-text"></i>
@@ -199,7 +198,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                         <div class="dash-count das3">
                             <div class="dash-counts">
                                 <h4><?= $sales ?></h4>
-                                <h5>Sales Invoice</h5>
+                                <h5>Factures de vente</h5>
                             </div>
                             <div class="dash-imgs">
                                 <i data-feather="file"></i>
@@ -209,17 +208,17 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                 </div>
 
                 <div class="row">
-                    <!-- Top Sales -->
+                    <!-- Meilleures Ventes -->
                     <div class="col-lg-7 col-sm-12 col-12 d-flex">
                         <div class="card flex-fill">
-                            <h4 class="card-title mb-0" style="padding:15px;">Top Sales</h4>
+                            <h4 class="card-title mb-0" style="padding:15px;">Meilleures Ventes</h4>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Sale reference</th>
-                                        <th>Customer</th>
+                                        <th>Réf. Vente</th>
+                                        <th>Client</th>
                                         <th>Date</th>
-                                        <th>Grand Total (DH)</th>
+                                        <th>Total Général (DH)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -228,7 +227,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                             <td><?= htmlspecialchars($sale['num_com'] ?? '') ?></td>
                                             <td class="productimgname">
                                                 <a href="javascript:void(0);" class="product-img">
-                                                    <img src="<?= htmlspecialchars($sale['image'] ?? 'assets/img/default.png') ?>" alt="product" />
+                                                    <img src="<?= htmlspecialchars($sale['image'] ?? 'assets/img/default.png') ?>" alt="produit" />
                                                 </a>
                                                 <a href="javascript:void(0);"><?= htmlspecialchars(($sale['nom'] ?? '') . ' ' . ($sale['prenom'] ?? '')) ?></a>
                                             </td>
@@ -245,14 +244,14 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                     <div class="col-lg-5 col-sm-12 col-12 d-flex">
                         <div class="card flex-fill">
                             <div class="card-header pb-0 d-flex justify-content-between align-items-center">
-                                <h4 class="card-title mb-0">Recently Added Products</h4>
+                                <h4 class="card-title mb-0">Produits ajoutés récemment</h4>
                                 <div class="dropdown">
                                     <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false" class="dropset">
                                         <i class="fa fa-ellipsis-v"></i>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a href="productlist.php" class="dropdown-item">Product List</a></li>
-                                        <li><a href="addproduct.php" class="dropdown-item">Add Product</a></li>
+                                        <li><a href="productlist.php" class="dropdown-item">Liste des produits</a></li>
+                                        <li><a href="addproduct.php" class="dropdown-item">Ajouter un produit</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -261,9 +260,9 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                     <table class="table datatable">
                                         <thead>
                                             <tr>
-                                                <th>Sno</th>
-                                                <th>Products</th>
-                                                <th>Price</th>
+                                                <th>N°</th>
+                                                <th>Produits</th>
+                                                <th>Prix</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -273,7 +272,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                                     <td><?= $sno; ?></td>
                                                     <td class="productimgname">
                                                         <a href="productlist.php" class="product-img">
-                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="product">
+                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="produit">
                                                         </a>
                                                         <a href="productlist.php"><?= htmlspecialchars($pr['lib_pr'] ?? '') ?></a>
                                                     </td>
@@ -298,7 +297,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                     <table class="table datatable">
                                         <thead>
                                             <tr>
-                                                <th>SNo</th>
+                                                <th>N°</th>
                                                 <th>Produit</th>
                                                 <th>Seuil min.</th>
                                                 <th>Stock actuel</th>
@@ -311,7 +310,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                                     <td><?= $sno; ?></td>
                                                     <td class="productimgname">
                                                         <a class="product-img" href="productlist.php">
-                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="product">
+                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="produit">
                                                         </a>
                                                         <a href="productlist.php"><?= htmlspecialchars($pr['lib_pr'] ?? '') ?></a>
                                                     </td>
@@ -335,7 +334,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                     <table class="table datatable">
                                         <thead>
                                             <tr>
-                                                <th>SNo</th>
+                                                <th>N°</th>
                                                 <th>Produit</th>
                                                 <th>Date péremption</th>
                                                 <th>Jours restants</th>
@@ -348,7 +347,7 @@ $recent_products = array_slice(array_reverse($products), 0, 4);
                                                     <td><?= $sno; ?></td>
                                                     <td class="productimgname">
                                                         <a class="product-img" href="productlist.php">
-                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="product">
+                                                            <img src="<?= htmlspecialchars($pr['pr_image'] ?? 'assets/img/default.png') ?>" alt="produit">
                                                         </a>
                                                         <a href="productlist.php"><?= htmlspecialchars($pr['lib_pr'] ?? '') ?></a>
                                                     </td>
