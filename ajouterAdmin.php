@@ -15,7 +15,7 @@ if (isset($_POST['ajouter'])) {
         $nv_admin = new Admin($nom, $prenom, $adr, $tele, $email, $folder, $mdp);
         $nv_admin->AjouterAdmin("Admin");
     } else {
-        exit("<h3> Failed to upload image!</h3>");
+        exit("<h3>Échec du téléversement de l'image !</h3>");
     }
     header("Location: newuser.php");
 }
