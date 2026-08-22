@@ -31,7 +31,7 @@ if (isset($_POST['conectee'])) {
         content="admin, estimations, bootstrap, entreprise, professionnel, créatif, facture, html5, responsive, projets">
     <meta name="author" content="Dreamguys - Modèle d'administration Bootstrap">
     <meta name="robots" content="noindex, nofollow">
-    <title>AMITAM Store - Connexion</title>
+    <title>GStock - Connexion</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
